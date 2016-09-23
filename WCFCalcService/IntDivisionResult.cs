@@ -10,8 +10,8 @@ namespace WCFCalcService
     public class IntDivisionResult
     {
         [DataMember]
-        public int Kvotioent;
+        public int Quotient;
         [DataMember]
-        public int Rest;
+        public int Remainder;
     }
 }

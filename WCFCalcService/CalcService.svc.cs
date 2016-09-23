@@ -13,25 +13,22 @@ namespace WCFCalcService
     {
         public int Add(int a, int b)
         {
-            return a + b;
+            return Adaptor.Add(a, b);
         }
 
         public IntDivisionResult Divide(int a, int b)
         {
-            IntDivisionResult result = new IntDivisionResult();
-            result.Kvotioent = a / b;
-            result.Rest = a % b;
-            return result;
+            return Adaptor.Divide(a, b);
         }
 
         public int Multiply(int a, int b)
         {
-            return a * b;
+            return Adaptor.Multiply(a, b);
         }
 
         public int Substract(int a, int b)
         {
-            return a - b;
+            return Adaptor.Substract(a, b);
         }
     }
 }
