@@ -29,7 +29,7 @@ namespace WCFCalcClient
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
             CalcServiceClient client = new CalcServiceClient();
-            client.Add(Convert.ToInt32(InputTbx1.Text), Convert.ToInt32(InputTbx2.Text));
+            ResultLbl.Content = "Result: " + client.Add(Convert.ToInt32(InputTbx1.Text), Convert.ToInt32(InputTbx2.Text));
         }
     }
 }
