@@ -9,15 +9,18 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0">
             <Label x:Name="TitleLbl" Content=" WCF calculator client" HorizontalAlignment="Center"/>
-            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
                 <TextBox x:Name="InputTbx1" Width="100"/>
                 <TextBox x:Name="InputTbx2" Width="100" Margin="10,0,0,0"/>
             </StackPanel>
             <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                <Button x:Name="AddBtn" Content="Add" Width="100" Click="AddBtn_Click"/>
-                <Button x:Name="SubstractBtn" Content="Substract" Width="100" Margin="10,0,0,0"/>
+                <Button x:Name="AddBtn" Content="Add" Width="60" Click="AddBtn_Click"/>
+                <Button x:Name="SubstractBtn" Content="Substract" Width="60" Margin="10,0,0,0" Click="SubstractBtn_Click"/>
+                <Button x:Name="MultiplyBtn" Content="Multiply" Width="60" Margin="10,0,0,0" Click="MultiplyBtn_Click"/>
+                <Button x:Name="DivideBtn" Content="Divide" Width="60" Margin="10,0,0,0" Click="DivideBtn_Click"/>
+                <Button x:Name="ModulusBtn" Content="Modulus" Width="60" Margin="10,0,0,0" Click="ModulusBtn_Click"/>
             </StackPanel>
-            <Label x:Name="ResultLbl" Content="result" Margin="0,10,0,0" HorizontalAlignment="Center"/>
+            <Label x:Name="ResultLbl" Content="Result: " Margin="0,10,0,0" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Window>

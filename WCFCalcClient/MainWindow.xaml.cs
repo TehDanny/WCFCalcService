@@ -21,15 +21,37 @@ namespace WCFCalcClient
     /// </summary>
     public partial class MainWindow : Window
     {
+        Controller controller;
+
         public MainWindow()
         {
             InitializeComponent();
+            controller = new Controller();
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            CalcServiceClient client = new CalcServiceClient();
-            ResultLbl.Content = "Result: " + client.Add(Convert.ToInt32(InputTbx1.Text), Convert.ToInt32(InputTbx2.Text));
+            ResultLbl.Content = "Result: " + controller.Add(InputTbx1.Text, InputTbx2.Text);
+        }
+
+        private void SubstractBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ResultLbl.Content = "Result: " + controller.Substract(InputTbx1.Text, InputTbx2.Text);
+        }
+
+        private void MultiplyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ResultLbl.Content = "Result: " + controller.Multiply(InputTbx1.Text, InputTbx2.Text);
+        }
+
+        private void DivideBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ResultLbl.Content = "Result: " + controller.Divide(InputTbx1.Text, InputTbx2.Text);
+        }
+
+        private void ModulusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ResultLbl.Content = "Result: " + controller.Modulus(InputTbx1.Text, InputTbx2.Text);
         }
     }
 }
