@@ -1,0 +1,22 @@
+﻿<Window x:Class="WCFCalcClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WCFCalcClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0">
+            <Label x:Name="TitleLbl" Content=" WCF calculator client" HorizontalAlignment="Center"/>
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                <TextBox x:Name="InputTbx1" Width="100"/>
+                <TextBox x:Name="InputTbx2" Width="100" Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                <Button x:Name="AddBtn" Content="Add" Width="100" Click="AddBtn_Click"/>
+                <Button x:Name="SubstractBtn" Content="Substract" Width="100" Margin="10,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
